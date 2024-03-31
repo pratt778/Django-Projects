@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <section class="w-full h-screen bg-white flex">
+        <div class="left w-[25%] bg-[#2F3C7E] h-full text-[#FBEAEB] flex flex-col px-8 py-4 gap-4">
+            <img src="{% static 'images/me.jpg' %}" alt="img" class="w-[200px] rounded-xl">
+            <div class="flex flex-col gap-[2px]">
+                <h2 class="text-xl font-bold border-b-2 p-1 mb-2 border-white">Contact</h2>
+                <p>
+                    <h3 class="font-semibold">Phone</h3>
+                    <span class="text-gray-400 font-semibold">+977 9812345678</span>
+                </p>
+                <p>
+                    <h3 class="font-semibold">Email</h3>
+                    <span class="text-gray-400 font-semibold" >@gmail.com</span>
+                </p>
+                <p>
+                    <h3 class="font-semibold">Address</h3>
+                    <span class="text-gray-400 font-semibold">kathmandu, Nepal</span>
+                </p>
+            </div>  
+            <div>
+                <h2 class="text-xl font-bold  border-b-2 p-1 mb-2 border-white">Education</h2>
+                <p>
+                    <h3 class="font-semibold">Degree</h3>
+                    <span class="text-gray-400 font-semibold">BCA</span>
+                </p>
+            </div>  
+            <div>
+                <h2 class="text-xl font-bold  border-b-2 p-1 mb-2 border-white">Expertise</h2>
+                <ul class="grid grid-cols-3">
+                    <li class="text-gray-400 font-semibold">HTML</li>
+                    <li class="text-gray-400 font-semibold">HTML</li>
+                    <li class="text-gray-400 font-semibold">HTML</li>
+                    <li class="text-gray-400 font-semibold">HTML</li>
+                    
+                 
+                </ul>
+            </div>  
+            <div>
+                <h2 class="text-xl font-bold  border-b-2 mb-2 p-1 border-white">Language</h2>
+                <div class="grid grid-cols-2 ">
+                    <h4 class="text-gray-400 font-semibold">English</h4>
+                    <h4 class="text-gray-400 font-semibold">Nepali</h4>
+                </div>
+               
+            </div>  
+        </div>
+        <div class="right flex flex-col gap-4 bg-[#FBEAEB] p-8 w-[75%] text-[#2F3C7E]">
+            <div class="intro flex flex-col gap-1">
+                <h1 class="text-5xl font-bold pb-4">Pratham <span>Sharma</span></h1>
+                <h2 class="font-semibold">Full Stack Developer</h2>
+                <p class="w-[80%] text-initial">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate quis nisi commodi mollitia enim, distinctio consequuntur cum optio delectus blanditiis est. Suscipit, minus ab.</p>
+            </div>
+            <div class="exp flex flex-col gap-1">
+                <h2 class="text-2xl font-bold  border-b-2 pb-1 mb-2 border-black">Experience</h2>
+                <div class="desc flex flex-col gap-1">
+                    <h4 class="text-gray-400">2024-2025</h4>
+                    <span class="text-gray-500">Company Name | kathamandu, Nepal</span>
+                    <h2 class="text-lg font-semibold">Job Position</h2>
+                    <p class="w-[80%]">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet molestiae nesciunt possimus accusantium! Temporibus pariatur, commodi voluptatum necessitatibus et labore? Deserunt quibusdam odit eveniet beatae.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold mb-4  border-b-2 pb-1 mb-2 border-black">Reference</h2>
+                <div class="ref flex gap-20">
+                    <div class="refdesc flex flex-col gap-1">
+                        <h4 class="font-bold">Pratham Sharma</h4>
+                        <span class="text-gray-500 font-semibold">Job position,company name</span>
+                        <h4 class="font-bold">phone</h4>
+                        <h4 class="font-bold">Email</h4>
+                    </div>
+                    <div class="refdesc flex flex-col gap-1">
+                        <h4 class="font-bold">Pratham Sharma</h4>
+                        <span class="text-gray-500 font-semibold">Job position,company name</span>
+                        <h4 class="font-bold">phone</h4>
+                        <h4 class="font-bold">Email</h4>
+                    </div>
+                 
+                </div>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold  border-b-2 pb-1 mb-2 border-black">Hobbies</h2>
+                <div class="flex gap-4">
+                    <span class="font-semibold text-gray-600">movies</span>
+                    <span class="font-semibold text-gray-600">movies</span>
+                    <span class="font-semibold text-gray-600">movies</span>
+                    <span class="font-semibold text-gray-600">movies</span>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

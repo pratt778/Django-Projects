@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    /* padding: 1rem; */
+    background-color: cornflowerblue;
+}
+
+.left{
+    /* color: white; */
+}
+li{
+    list-style:square;
+    margin-left: 1rem;
+}
+
+h1{
+    color: black;
+    font-size: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 5px solid black;
+    padding-bottom: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+div{
+    display: flex;
+    gap: 1rem;
+    color: white;
+    align-items: center;
+}
+label{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 75px;
+}
+
+input[type=text],input[type=email]{
+    outline: none;
+    border: none;
+    width: 300px;
+    padding:1rem;
+    font-size: 18px;
+    border-radius: 29px;
+}
+textarea{
+    outline: none;
+    border: none;
+    width: 320px;
+    padding: 0.5rem;
+    font-size: 18px;
+    border-radius: 10px;
+}
+input[type=submit]{
+    width: 140px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: orangered;
+    border-radius: 5px;
+    color: white;
+}
