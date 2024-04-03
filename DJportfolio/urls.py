@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('port/',include('base.urls')),
     path('emailsend/',include('emailsender.urls')),
+    path('auth/',include('authentication.urls')),
 ]
