@@ -1,0 +1,42 @@
+body{
+    background-color: gainsboro;
+}
+section{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+form{
+    width: 80%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+input[type=text],input[type=submit]{
+    padding: 0.3rem;
+    font-size: 18px;
+    outline: none;
+}
+#btn_sub{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+}
+.sec-msg{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
