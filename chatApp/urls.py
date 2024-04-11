@@ -6,5 +6,6 @@ urlpatterns = [
    path('',views.home,name='chathome'),
    path('checkroom',views.checkroom,name='checkroom'),
    path('<str:roomname>/',views.roomname,name='roomname'),
-   path('send',views.send,name='send')
+   path('send',views.send,name='send'),
+   path('getmsg/<str:roomname>',views.getmsg,name='getmsg'),
 ]

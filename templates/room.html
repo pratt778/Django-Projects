@@ -10,11 +10,27 @@
 <body>
     <section>
         <h1>Room Name : {{roomname}} </h1>
+        <script>
+           $(document).ready(function(){
+            setInterval(function(){
+                $.ajax({
+                    type:'GET',
+                    url:'/chat/getmsg/{{roomname}}',
+                    success:function(response){
+                        // console.log(response)
+                        $('#sec-msg').empty();
+                        for(var key in response.msg){
+                            var divs = "<div class='msg-cont'><h3 style='text-transform: capitalize;'>"+response.msg[key].user+"</h3><p>"+response.msg[key].value+"</p><span>"+response.msg[key].date+"</span></div>";
+                            $('#sec-msg').append(divs)
+                        }
+                    }
+                })
+            },1000)
+           })
+        </script>
         <div class="msg">
-            <div class="sec-msg">
-                <h3>{{username}}</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ex, aperiam eius qui fugiat placeat?</p>
-                <span>2024 12 jan</span>
+            <div class="sec-msg" id="sec-msg" style="display: flex; gap: 1rem;">
+               
             </div>
             <form id="post-form">
                 {% csrf_token %}
@@ -37,8 +53,8 @@
                     message:$('#msg').val(),
                     csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
                 },
-                success:function(data){
-                    console.log(data)
+                success:function(response){
+                    console.log(response)
                 }
             });
             document.getElementById('msg').value=''
