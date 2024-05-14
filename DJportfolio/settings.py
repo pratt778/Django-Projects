@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'emailsender',
     'authentication',
     'chatApp',
-    'DictionaryApp'
+    'DictionaryApp',
+    'loginSystem',
 ]
 
 MIDDLEWARE = [

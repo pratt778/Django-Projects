@@ -24,4 +24,5 @@ urlpatterns = [
     path('auth/',include('authentication.urls')),
     path('chat/',include('chatApp.urls')),
     path('dict/',include('DictionaryApp.urls')),
+    path('logsys/',include('loginSystem.urls')),
 ]
