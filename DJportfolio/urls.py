@@ -23,4 +23,5 @@ urlpatterns = [
     path('emailsend/',include('emailsender.urls')),
     path('auth/',include('authentication.urls')),
     path('chat/',include('chatApp.urls')),
+    path('dict/',include('DictionaryApp.urls')),
 ]

@@ -1,0 +1,14 @@
+<header>
+    <div>
+        <h1>Dictionary app</h1>
+    </div>
+    <form action="{% url "wordpage" %}" method="get" id="box_search">
+ 
+        <div class="input-group" id="box">
+            <input type="search" class="form-control rounded" name="word" placeholder="Enter your Word.." aria-label="Search" aria-describedby="search-addon" />
+            <button type="submit" id="btn_search" class="btn btn-success" data-mdb-ripple-init><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg></button>
+        </div>
+    </form>
+</header>
