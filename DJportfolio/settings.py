@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'chatApp',
     'DictionaryApp',
     'loginSystem',
+    'CRUD',
 ]
 
 MIDDLEWARE = [
