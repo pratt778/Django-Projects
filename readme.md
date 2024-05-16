@@ -1,0 +1,1 @@
+Made various projects using Django and Bootsraps like Chat app, Authorization system, Dictionary app, and many more..
