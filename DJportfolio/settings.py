@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'DictionaryApp',
     'loginSystem',
     'CRUD',
+    'todo',
 ]
 
 MIDDLEWARE = [
