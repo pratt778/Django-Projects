@@ -3,32 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Home | Todo</title>
 </head>
 <body>
-    <h1>todo list</h1>
-    <form action="" method="post">
+    <h1 align="center" class="text-3xl font-bold">Todo List</h1>
+    <form action="" method="post" class="p-3 flex flex-col gap-2">
         {% csrf_token %}
         {{form}}
-        <button name="sub">Add</button>
+        <button name="sub" class="bg-green-600 p-2 w-[100px] hover:bg-green-800 text-white font-semibold">Add</button>
     </form>
-    <section style="margin-top: 2rem;">
-        <table border="1" cellpadding=10>
-            <tr>
-                <th>Task</th>
-                <th>Description</th>
-                <th>user</th>
-                <th>Action</th>
-            </tr>
-            {% for t in list %}
-            <tr>
-                <td>{{t.todoname}}</td>
-                <td>{{t.tododesc}}</td>
-                <td>{{t.user}}</td>
-                <td><button><a href="edit/{{t.id}}">Edit</a></button><button><a href="del/{{t.id}}">Delete</a></button></td>
-            </tr>
-            {% endfor %}
-        </table>
+    <section>
+        <div class="flex flex-col">
+            <div class="overflow-x-auto sm:-mx-6 lg:mx-1">
+              <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                <div class="overflow-hidden">
+                  <table
+                    class="min-w-full text-left text-sm font-light text-surface dark:text-white">
+                    <thead
+                      class="border-b border-neutral-200 font-medium bg-blue-400 dark:border-white/10">
+                      <tr>
+                        <th scope="col" class="px-6 py-4">Task</th>
+                        <th scope="col" class="px-6 py-4">Description</th>
+                        <th scope="col" class="px-6 py-4">User</th>
+                        <th scope="col" class="px-6 py-4">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for t in list %}
+                      <tr class="border-b border-neutral-200 dark:border-white/10">
+                        <td class="whitespace-nowrap px-6 py-4 font-medium">{{t.todoname | capfirst}}</td>
+                        <td class="whitespace-nowrap px-6 py-4 font-semibold">{{t.tododesc | capfirst}}</td>
+                        <td class="whitespace-nowrap px-6 py-4 font-semibold">{{t.user | capfirst}}</td>
+                        <td class="whitespace-nowrap px-6 py-4 flex gap-2"><button class=" bg-orange-400 p-2 text-white font-semibold hover:bg-orange-600"><a href="edit/{{t.id}}">Edit</a></button><button class="bg-red-400 text-white font-semibold p-2 hover:bg-red-600 "><a href="del/{{t.id}}">Delete</a></button></td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
 </body>
 </html>
